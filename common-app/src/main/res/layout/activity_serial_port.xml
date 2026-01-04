@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 顶部标题栏 -->
+    <include layout="@layout/toolbar_layout" />
+
+    <!-- 内容区可滚动 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_bottom"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_serial_port_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/serial_port_number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/sp_serial_num"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <!-- 打开/关闭串口 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_bottom"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <Button
+                    android:id="@+id/btn_open_serial_port"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/serial_port_oepn" />
+
+                <Button
+                    android:id="@+id/btn_close_serial_port"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/btn_open_serial_port"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/serial_port_close" />
+            </RelativeLayout>
+
+            <!-- 发送值输入 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_bottom"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/serial_port_send_value"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:id="@+id/et_send_value"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="@string/serial_port_send_value_hint" />
+            </RelativeLayout>
+
+            <!-- 发送/清除按钮 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_bottom"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <Button
+                    android:id="@+id/btn_send_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/serial_port_value_send" />
+
+                <Button
+                    android:id="@+id/btn_clear_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/btn_send_value"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/serial_port_value_clear" />
+            </RelativeLayout>
+
+            <!-- 串口返回信息框 -->
+            <EditText
+                android:id="@+id/et_serial_info"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_border_bottom"
+                android:gravity="start|top"
+                android:hint="@string/serial_port_output_info"
+                android:focusable="false"
+                android:clickable="false"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

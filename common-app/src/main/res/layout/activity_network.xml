@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/background_dashed_border">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Wi-Fi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wifi_ip"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wifi"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/ip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_wifi_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_wifi_ip"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_wifi_ip"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wifi_mask"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wifi_ip"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/mask"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_wifi_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_wifi_mask"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_wifi_mask"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wifi_gateway"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wifi_mask"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/gateway"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_wifi_gateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_wifi_gateway"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_wifi_gateway"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wifi_dns1"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wifi_gateway"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/dns1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_wifi_dns1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_wifi_dns1"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_wifi_dns1"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wifi_dns2"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wifi_dns1"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/dns2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_wifi_dns2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_wifi_dns2"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_wifi_dns2"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioGroup
+                    android:id="@+id/rg_wifi_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wifi_dns2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_wifi_dynamic"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:background="@drawable/radio_button_background"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="@string/dynamic_ip"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_wifi_static"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:background="@drawable/radio_button_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="@string/static_ip"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wifi_save"
+                    android:layout_width="@dimen/dp_68"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_below="@+id/rg_wifi_mode"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/save_button_bg_selector"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/background_dashed_border">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/ethernet"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eth_ip"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_eth"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/ip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_eth_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_eth_ip"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_eth_ip"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eth_mask"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_eth_ip"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/mask"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_eth_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_eth_mask"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_eth_mask"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eth_gateway"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_eth_mask"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/gateway"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_eth_gateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_eth_gateway"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_eth_gateway"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eth_dns1"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_eth_gateway"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/dns1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_eth_dns1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_eth_dns1"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_eth_dns1"
+                    android:text="0.0.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eth_dns2"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_eth_dns1"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Dns2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_eth_dns2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_eth_dns2"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/tv_eth_dns2"
+                    android:text="@string/dns2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioGroup
+                    android:id="@+id/rg_interfacename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_eth_dns2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_eth0"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:background="@drawable/radio_button_background"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="@string/ethernet_0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_eth1"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:background="@drawable/radio_button_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="@string/ethernet_1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/rg_eth_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_interfacename"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_eth_dynamic"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:background="@drawable/radio_button_background"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="@string/dynamic_ip"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_eth_static"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:background="@drawable/radio_button_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="@string/static_ip"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eth_save"
+                    android:layout_width="@dimen/dp_68"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_below="@+id/rg_eth_mode"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@drawable/save_button_bg_selector"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

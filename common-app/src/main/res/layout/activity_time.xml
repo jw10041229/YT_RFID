@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="@string/system_time"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_11" />
+
+            <RelativeLayout
+                android:id="@+id/layout_autotime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@drawable/background_border_top_and_bottom"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_autotime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/autotime_status"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/automatic_synchronization_time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/autotime_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:thumb="@drawable/switch_thumb" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_time12_24"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/background_border_bottom"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_time12_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/time12_24_status"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/confirm_24_hour"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/time12_24_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:thumb="@drawable/switch_thumb" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_set_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/background_border_bottom"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10"
+                android:text="@string/set_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_set_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/background_border_bottom"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10"
+                android:text="@string/set_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="@string/system_timezone"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_11" />
+
+            <RelativeLayout
+                android:id="@+id/layout_autotimezone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@drawable/background_border_top_and_bottom"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_autotimezone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/autotimezone_status"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/automatically_synchronize_timezones"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/autotimezone_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:thumb="@drawable/switch_thumb" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_timezone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/background_border_bottom">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/spinner_timezone"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/set_timezone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <Spinner
+                    android:id="@+id/spinner_timezone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:entries="@array/time_zone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_10" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

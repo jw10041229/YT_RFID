@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 当按下（pressed）时的背景色 -->
+    <item android:drawable="@drawable/background_black_border" android:state_pressed="true" />
+    <!-- 默认背景色 -->
+    <item android:drawable="@drawable/background_blue_border" />
+</selector>

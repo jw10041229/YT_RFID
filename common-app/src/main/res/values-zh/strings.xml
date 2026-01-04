@@ -1,0 +1,196 @@
+<resources>
+    <string name="app_name">YT-RFID</string>
+
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="reboot">重启</string>
+    <string name="reboot_system_confirm">是否重启系统？</string>
+
+    <string name="boot_animation">开机动画</string>
+    <string name="boot_animation_title">开机动画(重启系统生效)</string>
+    <string name="boot_animation_set">设置开机动画</string>
+    <string name="boot_animation_reset">重置开机动画</string>
+    <string name="boot_video_title">开机视频(重启系统生效)</string>
+    <string name="boot_video_set">设置开机视频</string>
+    <string name="boot_video_reset">重置开机视频</string>
+    <string name="boot_logo_title">开机LOGO(重启系统生效)</string>
+    <string name="boot_logo_set">设置开机LOGO</string>
+    <string name="boot_logo_reset">重置开机LOGO</string>
+    <string name="reboot_system">重启系统</string>
+
+    <string name="boot_animation_path_empty">开机动画包存放地址不能为空</string>
+    <string name="boot_animation_path_not_exist">开机动画包存放地址不存在</string>
+    <string name="boot_animation_format_incorrect">开机动画包格式不正确</string>
+    <string name="boot_animation_set_confirm">确认设置开机动画？</string>
+    <string name="boot_animation_set_success">开机动画设置成功</string>
+    <string name="boot_animation_set_failed">开机动画设置失败:</string>
+    <string name="boot_animation_reset_confirm">确认重置开机动画？</string>
+    <string name="boot_animation_reset_success">开机动画重置成功</string>
+    <string name="boot_animation_reset_failed">开机动画重置失败:</string>
+
+    <string name="boot_video_path_empty">开机视频包存放地址不能为空</string>
+    <string name="boot_video_path_not_exist">开机视频包存放地址不存在</string>
+    <string name="boot_video_format_incorrect">开机视频包格式不正确</string>
+    <string name="boot_video_set_confirm">确认设置开机视频？</string>
+    <string name="boot_video_set_success">开机视频设置成功</string>
+    <string name="boot_video_set_failed">开机视频设置失败:</string>
+    <string name="boot_video_reset_confirm">确认重置开机视频？</string>
+    <string name="boot_video_reset_success">开机视频重置成功</string>
+    <string name="boot_video_reset_failed">开机视频重置失败:</string>
+
+    <string name="boot_logo_path_empty">开机LOGO包存放地址不能为空</string>
+    <string name="boot_logo_path_not_exist">开机LOGO包存放地址不存在</string>
+    <string name="boot_logo_format_incorrect">开机LOGO包格式不正确</string>
+    <string name="boot_logo_set_confirm">确认设开机LOGO？</string>
+    <string name="boot_logo_set_success">开机Logo设置成功</string>
+    <string name="boot_logo_set_failed">开机Logo设置失败:</string>
+    <string name="boot_logo_reset_confirm">确认重置开机LOGO？</string>
+    <string name="boot_logo_reset_success">开机Logo重置成功</string>
+    <string name="boot_logo_reset_failed">开机Logo重置失败:</string>
+
+    <string name="system_ui">系统界面</string>
+    <string name="dpi_title">DPI(仅提供部分dpi值设置，如找不到dpi值则显示none)</string>
+    <string name="screen_density">屏幕密度</string>
+    <string name="status_bar_title">顶部状态栏(adb shell settings put global persist.sys.statusbar.enable 1)</string>
+    <string name="show_status_bar">显示状态栏</string>
+    <string name="dropdown_menu_title">顶部下拉框(adb shell settings put global persist.sys.explan.enable 1)</string>
+    <string name="show_dropdown_menu">显示下拉框</string>
+    <string name="navigation_bar_title">底部导航栏(adb shell settings put global persist.sys.navigationbar.enable 1)</string>
+    <string name="show_navigation_bar">显示导航栏</string>
+
+    <string name="system_time">系统时间</string>
+    <string name="automatic_synchronization_time">自动同步时间</string>
+    <string name="confirm_24_hour">是否使用24小时制</string>
+    <string name="set_time">设置时间</string>
+    <string name="set_date">设置日期</string>
+    <string name="system_timezone">系统时区(仅提供部分时区设置，如找不到时区则显示undefine/undefine)</string>
+    <string name="automatically_synchronize_timezones">自动同步时区</string>
+    <string name="set_timezone">设置时区</string>
+
+    <string name="hardware_information">硬件信息</string>
+    <string name="device_information">设备信息</string>
+    <string name="device_name">设备名称</string>
+    <string name="product_model">产品型号</string>
+    <string name="manufacturer">制造商</string>
+    <string name="cpu_model">CPU型号</string>
+    <string name="android_version">Android版本</string>
+    <string name="firmware_version">固件版本</string>
+    <string name="serial_number">CPUId 序列号</string>
+
+    <string name="system_screen_rotation">系统屏幕旋转</string>
+    <string name="set_screen_rotation_angle_title">系统屏幕旋转(重启系统生效)</string>
+    <string name="set_screen_rotation_angle">设置屏幕旋转角度</string>
+
+    <string name="app_self_startup">应用自启动</string>
+    <string name="app_self_startup_switch_title">开机自启动或者应用从后台切到前台</string>
+    <string name="select_self_startup_app">选择自启动应用</string>
+    <string name="time_interval_switch_to_front">应用切到前台间隔时间</string>
+    <string name="interval_time_empty">间隔时间不能为空</string>
+    <string name="interval_time_set_success">间隔时间设置成功</string>
+    <string name="app_crash_andrestart">应用崩溃自启动</string>
+    <string name="save">保存</string>
+
+    <string name="silent_installation">静默安装</string>
+    <string name="apk_path_empty">APK存放地址不能为空</string>
+    <string name="apk_path_not_exist">APK存放地址不存在</string>
+    <string name="apk_file_incorrect">APK文件格式不正确</string>
+    <string name="install_success">应用安装成功</string>
+    <string name="install_failed">应用安装失败:</string>
+    <string name="installing">正在安装…</string>
+    <string name="confirm_install">确认安装应用？</string>
+    <string name="install_apps_silently">静默安装应用</string>
+    <string name="select_application">选择应用</string>
+    <string name="install_application">安装应用</string>
+
+    <string name="home_application">系统桌面</string>
+    <string name="home_application_subtitle">桌面应用(重启系统生效,返回键拦截由app自行处理)</string>
+    <string name="select_home_application">选择桌面应用</string>
+    <string name="reset_home_application">初始化系统桌面</string>
+    <string name="reset_home_application_confirm">是否初始化系统桌面？</string>
+    <string name="native_system_desktop">已经是原生系统桌面!</string>
+
+
+    <string name="system_wallpaper">系统壁纸</string>
+    <string name="select_system_wallpaper">选择系统壁纸</string>
+    <string name="reset_system_wallpaper">重置系统壁纸</string>
+    <string name="reset_system_wallpaper_confirm">确定重置壁纸?</string>
+    <string name="wallpaper_reset_success">系统壁纸重置成功</string>
+    <string name="wallpaper_reset_failed">系统壁纸重置失败</string>
+    <string name="wallpaper_get_failed">无法获取图片</string>
+    <string name="wallpaper_decode_failed">壁纸图片解码失败</string>
+    <string name="wallpaper_set_success">壁纸设置成功</string>
+    <string name="wallpaper_set_failed">壁纸设置失败</string>
+    <string name="wallpaper_open_failed">壁纸打开失败</string>
+    <string name="wallpaper_insufficient_memory">内存不足，无法设置壁纸</string>
+
+    <string name="reset_factory">恢复出厂设置</string>
+    <string name="reset_factory_dialog_title">确认恢复出厂设置</string>
+    <string name="reset_factory_dialog_tip">注意：此操作将清除所有数据！</string>
+
+    <string name="network">网络</string>
+    <string name="ip">IP</string>
+    <string name="mask">掩码</string>
+    <string name="gateway">网关</string>
+    <string name="dns1">Dns1</string>
+    <string name="dns2">Dns2</string>
+    <string name="dynamic_ip">动态IP</string>
+    <string name="static_ip">静态IP</string>
+    <string name="network_save">保存</string>
+    <string name="ethernet">以太网</string>
+    <string name="ethernet_0">网络0</string>
+    <string name="ethernet_1">网络1</string>
+
+
+    <string name="logcat">日志</string>
+    <string name="start_log_save">开启日志保存</string>
+    <string name="system_log">系统日志</string>
+    <string name="log_export">导出系统日志到U盘或者Sdcard</string>
+    <string name="log_export_path_empty">日志保存路径不存在</string>
+    <string name="log_export_confirm">确定导出日志？</string>
+    <string name="log_export_success">导出日志成功</string>
+    <string name="log_export_failed">导出日志失败:</string>
+    <string name="clear_log">清除日志</string>
+    <string name="clear_log_confirm">确定清除日志？</string>
+    <string name="clear_log_success">清除日志成功</string>
+    <string name="clear_log_failed">清除日志失败:</string>
+    <string name="exporting">导出中…</string>
+    <string name="clearing">清除中…</string>
+
+    <string name="timed_sleep">定时休眠</string>
+    <string name="timeout_never">永不</string>
+    <string name="timeout_15sec">15秒</string>
+    <string name="timeout_30sec">30秒</string>
+    <string name="timeout_1min">1分钟</string>
+    <string name="timeout_5min">5分钟</string>
+    <string name="timeout_10min">10分钟</string>
+
+    <string name="serial_port">串口</string>
+    <string name="serial_port_number">串口号</string>
+    <string name="serial_port_oepn">打开</string>
+    <string name="serial_port_close">关闭</string>
+    <string name="serial_port_send_value">发送数据</string>
+    <string name="serial_port_send_value_hint">在这里输入</string>
+    <string name="serial_port_value_send">发送</string>
+    <string name="serial_port_value_clear">清除</string>
+    <string name="serial_port_output_info">串口输出信息</string>
+    <string name="serial_port_path_failed">未获取到串口路径</string>
+    <string name="open_serial_port">打开串口:</string>
+    <string name="close_serial_port">关闭串口:</string>
+
+
+    <string name="gpio">Gpio</string>
+    <string name="gpio_number">GPIO号</string>
+    <string name="gpio_value">电平值(0:低, 1:高)</string>
+    <string name="gpio_direction">引脚方向(in / out)</string>
+    <string name="set_gpio_value">设置GPIO电平值</string>
+    <string name="get_gpio_value">获取GPIO电平值</string>
+    <string name="set_gpio_direction">设置GPIO引脚方向</string>
+    <string name="get_gpio_direction">获取GPIO引脚方向</string>
+    <string name="set_gpio_value_error">设置 GPIO电平值失败</string>
+    <string name="get_gpio_value_error">获取 GPIO电平值失败</string>
+    <string name="set_gpio_direction_error">设置 GPIO引脚方向失败</string>
+    <string name="get_gpio_direction_error">获取GPIO引脚方向失败</string>
+    <string name="gpio_initialization_failed">GPIO 初始化失败</string>
+
+
+</resources>

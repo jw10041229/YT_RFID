@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="@string/dpi_title"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_11" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@drawable/background_border_top_and_bottom">
+
+                <TextView
+                    android:id="@+id/tv_set_dpi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/spinner_dpi"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/screen_density"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <Spinner
+                    android:id="@+id/spinner_dpi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:entries="@array/dpi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_10" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="@string/status_bar_title"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_11" />
+
+            <RelativeLayout
+                android:id="@+id/layout_statusbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@drawable/background_border_top_and_bottom"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_topbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/topbar_status"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/show_status_bar"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/topbar_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:thumb="@drawable/switch_thumb" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="@string/dropdown_menu_title"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_11" />
+
+            <RelativeLayout
+                android:id="@+id/layout_dropbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@drawable/background_border_top_and_bottom"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_dropmenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/dropmenu_status"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/show_dropdown_menu"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/dropmenu_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:thumb="@drawable/switch_thumb"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="@string/navigation_bar_title"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_11" />
+
+            <RelativeLayout
+                android:id="@+id/layout_navibar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@drawable/background_border_top_and_bottom"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_navibar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/navibar_status"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="@string/show_navigation_bar"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/navibar_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:thumb="@drawable/switch_thumb"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

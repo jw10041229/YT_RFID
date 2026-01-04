@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.yt.androidsdk"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 102
+        versionName "1.0.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86', 'x86_64'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        release {
+            storeFile file('./dwin.jks')
+            storePassword 'dwin123456'
+            keyAlias 'dwin'
+            keyPassword 'dwin123456'
+        }
+
+        debug {
+            storeFile file('./dwin.jks')
+            storePassword 'dwin123456'
+            keyAlias 'dwin'
+            keyPassword 'dwin123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        // 通用功能（功能在标准屏上都可以正常使用）
+        common {
+            applicationId "com.yt.androidsdk"
+            versionCode 101
+            versionName "1.0.1"
+            buildConfigField "boolean", "isShowTimedSleep", "true"
+        }
+        //15.6寸
+        DW156 {
+            applicationId "com.dwin.androidsdk"
+            versionCode 101
+            versionName "1.0.1"
+            buildConfigField "boolean", "isShowTimedSleep", "false"
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def date = new Date()
+            def formattedDate = date.format('yyyyMMdd')
+            if (variant.buildType.name.equals('release')) {
+                //outputFileName = "${variant.productFlavors[0].name}_release_${formattedDate}_V${variant.mergedFlavor.versionName}.apk"
+                outputFileName = outputFile.name.replace(".apk", "") + "-" + formattedDate + "-V" + variant.versionName + ".apk"
+            } else if (variant.buildType.name.equals('debug')) {
+                //outputFileName = "${variant.productFlavors[0].name}_debug_${formattedDate}_V${variant.mergedFlavor.versionName}.apk"
+                outputFileName = outputFile.name.replace(".apk", "") + "-" + formattedDate + "-V" + variant.versionName + ".apk"
+            }
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs', "../common-app/libs"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation rootProject.ext.support["appcompat"]
+    implementation rootProject.ext.support["preference"]
+    implementation rootProject.ext.support["design"]
+    implementation rootProject.ext.support["constraint-layout"]
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(':common-app')
+}

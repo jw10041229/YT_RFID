@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <size android:width="@dimen/dp_20" android:height="@dimen/dp_12" />
+            <solid android:color="#4073FD" />
+            <corners android:radius="@dimen/dp_10" />
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <size android:width="@dimen/dp_20" android:height="@dimen/dp_12" />
+            <solid android:color="#808080" /> <!-- 关闭状态为灰色 -->
+            <corners android:radius="@dimen/dp_10" />
+        </shape>
+    </item>
+</selector>

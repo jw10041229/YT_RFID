@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#008577</color>/
+    <color name="white">#fff</color>
+    <color name="gray">#BEBEBE</color>
+    <color name="black">#000</color>
+    <color name="DodgerBlue">#1E90FF</color>
+    <color name="IndianRed">#CD5C5C</color>
+    <color name="Thistle">#D8BFD8</color>
+    <color name="Honeydew2">#E0EEE0</color>
+    <color name="Honeydew3">#C1CDC1</color>
+    <color name="SteelBlue3">#6E7B8B</color>
+    <color name="gray_bg">#EEEEEE</color>
+    <color name="lessBlue">#38B1BA</color>
+</resources>

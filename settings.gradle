@@ -1,0 +1,2 @@
+include ':common-app',":dwin"
+rootProject.name = "DWAndroidTest_User"

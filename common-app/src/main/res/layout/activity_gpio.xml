@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 可选：顶部标题栏 -->
+    <include layout="@layout/toolbar_layout" />
+
+    <!-- 内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- GPIO 编号 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_bottom"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gpio_number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:id="@+id/et_gpio_num"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:text="134"
+                    android:inputType="number" />
+            </RelativeLayout>
+
+            <!-- GPIO 电平值 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_bottom"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gpio_value"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/spinner_gpio_value"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:entries="@array/gpio_value_array"/>
+            </RelativeLayout>
+
+            <!-- GPIO 方向 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_bottom"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gpio_direction"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/spinner_gpio_direction"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:entries="@array/gpio_direction_array"/>
+            </RelativeLayout>
+
+            <!-- 按钮区域 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingStart="0dp"
+                android:paddingLeft="0dp"
+                android:gravity="start">
+
+            <Button
+                android:id="@+id/btn_set_gpio_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_gpio_value" />
+
+            <Button
+                android:id="@+id/btn_get_gpio_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_gpio_value"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btn_set_gpio_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_gpio_direction"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btn_get_gpio_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_gpio_direction"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
