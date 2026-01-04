@@ -183,7 +183,7 @@ public class ReadOrWrite1Activity extends AppCompatActivity implements SerialInt
     void connect485Serial() {
         serialHandleRF = new SerialHandle();
         serialHandleRF.addSerialInter(this);
-        serialHandleRF.open(RF_485_ADDR, 115200, 8, 1, 0, true, 100);
+        serialHandleRF.open(RF_485_ADDR, 9600, 8, 1, 0, true, 100);
     }
     void connectLora() {
         serialHandleLora = new SerialHandle();
