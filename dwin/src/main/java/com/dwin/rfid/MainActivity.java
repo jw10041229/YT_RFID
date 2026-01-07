@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements FunctionAdapter.O
         iv_back.setOnClickListener(this);
         recyclerView = findViewById(R.id.recycler_view);
         initData();
-        startActivity(new Intent(this, ReadOrWrite1Activity.class));
+        startActivity(new Intent(this, ReadOrWrite2Activity.class));
     }
 
     private String mBootAnimation = "";
