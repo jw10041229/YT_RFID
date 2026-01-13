@@ -157,7 +157,7 @@ public class ReadOrWrite2Activity extends AppCompatActivity implements SerialInt
                 openRFGPIO();
                 countAgg = 1;
             }
-        },1L,60, TimeUnit.SECONDS);
+        },3L,60, TimeUnit.SECONDS);
     }
 
     //初始化RecycleView
@@ -310,9 +310,9 @@ public class ReadOrWrite2Activity extends AppCompatActivity implements SerialInt
                     client.sendSynMsg(msgStop);
                     if (0x00 == msgStop.getRtCode()) {
                         isReader = false;
-                        ToastUtils.handlerText("停止成功");
+                        //ToastUtils.handlerText("停止成功");
                     } else {
-                        ToastUtils.handlerText("停止失败");
+                       // ToastUtils.handlerText("停止失败");
                     }
                 }
             });
@@ -647,10 +647,9 @@ public class ReadOrWrite2Activity extends AppCompatActivity implements SerialInt
         runOnUiThread(this::stopRead);
         try {
             Thread.sleep(1000);
-        } catch (InterruptedException e) {
-        }
-        setGpioValue(5,0);
-        try {
+            setGpioValue(RF_SERIAL_GPIO_NUM,0);
+            Thread.sleep(500);
+            setGpioValue(RF_POWER_GPIO_NUM,0);
             Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
